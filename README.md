@@ -90,7 +90,10 @@ To get an earlier version of the asset, the asOf query parameter can be used, su
 http://localhost:8000/assets/qJfnKleFCUW6rlYsKEGiEA?asOf=2025-03-29T00:00:00
 If there are no earlier versions of the asset, a 404 error is returned.
 
-To exercise the POST request, I use Postman to submit a POST request with the json body such as:
+To exercise the POST request, I use Postman to submit a POST request to
+`localhost:8000/assets`
+with a `Content-Type: application/json` header
+and a json body such as:
 ```json
 {
   "assetDescription": null,
@@ -100,7 +103,7 @@ To exercise the POST request, I use Postman to submit a POST request with the js
   "assetMask": null,
   "assetName": null,
   "assetOwnerName": null,
-  "balanceAsOf": "Fri, 29 Mar 2025 15:55:22 GMT",
+  "balanceAsOf": "2025-03-29T15:55:22+00:00",
   "balanceCostBasis": 0.0,
   "balanceCostFrom": "UserManual",
   "balanceCurrent": 5000.0,
@@ -110,13 +113,12 @@ To exercise the POST request, I use Postman to submit a POST request with the js
   "balanceQuantityCurrent": 5000.0,
   "beneficiaryComposition": null,
   "cognitoId": "d92f061e-a6b4-4292-97ab-3fd76d4e3442",
-  "creationDate": "Fri, 28 Mar 2025 15:55:36 GMT",
+  "creationDate": "2025-03-28T15:55:22+00:00",
   "currencyCode": null,
   "deactivateBy": null,
   "descriptionEstatePlan": "",
   "hasInvestment": null,
   "holdings": null,
-  "id": 1,
   "includeInNetWorth": true,
   "institutionId": 101,
   "institutionName": null,
@@ -126,10 +128,10 @@ To exercise the POST request, I use Postman to submit a POST request with the js
   "isAsset": true,
   "isFavorite": false,
   "isLinkedVendor": null,
-  "lastUpdate": "Wed, 01 Jan 2025 16:55:22 GMT",
-  "lastUpdateAttempt": "Fri, 28 Mar 2025 16:16:13 GMT",
+  "lastUpdate": "2025-01-01T15:55:22+00:00",
+  "lastUpdateAttempt": "2025-03-28T15:55:22+00:00",
   "logoName": null,
-  "modificationDate": "Fri, 28 Mar 2025 16:16:13 GMT",
+  "modificationDate": "2025-03-28T15:55:22+00:00",
   "nextUpdate": null,
   "nickname": "Cash Test",
   "note": null,
