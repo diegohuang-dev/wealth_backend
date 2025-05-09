@@ -1,0 +1,22 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8000:5000"
+    develop:
+      watch:
+        - action: sync
+          path: .
+          target: /code
+    depends_on:
+      mysql:
+        condition: service_healthy
+  mysql:
+    image: "mysql:latest"
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: yes  # for dev only, not for production
+    healthcheck:
+      test: ["CMD", "mysqladmin" ,"ping", "-h", "localhost"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
