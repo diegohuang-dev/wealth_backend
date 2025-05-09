@@ -5,11 +5,11 @@
 ## Components within the submission
 
 The submission is mainly composed
-- app.py: Flask backend code
-- Dockerfile for the Flask backend container
-- compose.yaml which starts up two containers: one for the Flask backend and one for the MySQL database server
-- import\_db.sh which creates the database and table, and inserts the asset data into the table
-- asset\_orm.py which uses SQLAlchemy to map the database table to a Python object. This is used to create the table and select/insert rows.
+- `app.py`: Flask backend code
+- `Dockerfile` for the Flask backend container
+- `compose.yaml` which starts up two containers: one for the Flask backend and one for the MySQL database server
+- `import_db.sh` which creates the database and table, and inserts the asset data into the table
+- `asset_orm.py` which uses SQLAlchemy to map the database table to a Python object. This is used to create the table and select/insert rows.
 
 The APIs are:
 ```
@@ -84,7 +84,7 @@ http://localhost:8000/assets
 to get the list of all assets
 and
 http://localhost:8000/assets/qJfnKleFCUW6rlYsKEGiEA
-to get the latest version of a specific asset with asset id qJfnKleFCUW6rlYsKEGiEA
+to get the latest version of a specific asset with asset id `qJfnKleFCUW6rlYsKEGiEA` for example.
 
 To get an earlier version of the asset, the asOf query parameter can be used, such as:
 http://localhost:8000/assets/qJfnKleFCUW6rlYsKEGiEA?asOf=2025-03-29T00:00:00
